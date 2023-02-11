@@ -1,0 +1,120 @@
+/* Stylesheet for Frontend Mentor Challenge #2 - nftnft-preview-card-component-main */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    --clr-soft-blue: hsl(215, 51%, 70%);
+    --clr-cyan: hsl(178, 100%, 50%);
+    --clr-cyan-overlay: hsl(178, 100%, 90%);
+
+    --clr-main-BG: hsl(217, 54%, 11%);
+    --clr-card-BG: hsl(216, 50%, 16%);
+    --clr-dark-blue-line: hsl(215, 32%, 27%);
+    --clr-white: hsl(0, 0%, 100%);
+
+}
+
+body {
+    background: var(--clr-main-BG);
+    color: var(--clr-soft-blue);
+    width: 100%;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Outfit', sans-serif;
+    display: grid;
+    min-height: 100vh;
+    place-content:center;
+    /* justify-content: center; */
+
+}
+.container {
+   width: 350px;
+   height: auto;
+   background: var(--clr-card-BG);
+   padding: 1.5rem;
+   border-radius: 15px;
+   align-self: center;
+}
+.container-image {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    opacity: 0;
+    z-index: 999;
+    transition: opacity 0.5s ease-in-out;
+}
+.overlay img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.overlay:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.main-logo {
+    width: 100%;
+    border-radius: 10px;
+}
+.title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--clr-white);
+    margin: 10px 0;
+}
+.creator {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.creator > img {
+    width: 35px;
+    border: 1px solid var(--clr-white);
+    border-radius: 50%;
+}
+.creator > p {
+    margin-left: 1rem;
+}
+.flex-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--clr-soft-blue);
+}
+.price {
+    color: var(--clr-cyan);
+    font-weight: 600;
+}
+.author {
+    color: var(--clr-white);
+}
+.icons img {
+    margin-right: 0.5rem;
+    font-size: 0.5rem;
+    align-self: center;
+}
+a {
+    color: var(--clr-white);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--clr-cyan);
+}
+img a:hover {
+    background-color: aliceblue;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
